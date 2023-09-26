@@ -28,5 +28,9 @@
 
     <dimen name="view_width">300px</dimen>
     <dimen name="view_height">300px</dimen>
+
+    <string name="previousButtonText">Previous</string>
+    <string name="nextButtonText">Next</string>
+    <string name="currentIndexText">Index</string>
 </resources>
 
