@@ -33,10 +33,10 @@
         app:srcCompat="@drawable/picture" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/hiddenText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/hiddenText"
         app:layout_constraintBottom_toTopOf="@id/commonButtonsLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

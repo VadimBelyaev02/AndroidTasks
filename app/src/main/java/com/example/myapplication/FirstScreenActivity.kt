@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 
 class FirstScreenActivity : BaseScreenActivity() {
@@ -15,6 +16,7 @@ class FirstScreenActivity : BaseScreenActivity() {
     private lateinit var leftButton: Button
     private lateinit var rightButton: Button
     private lateinit var bearPicture: ImageView
+    private lateinit var hiddenText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,15 +30,21 @@ class FirstScreenActivity : BaseScreenActivity() {
         bearPicture = findViewById(R.id.bearPicture)
         leftButton = findViewById(R.id.leftButton)
         rightButton = findViewById(R.id.rightButton)
+        hiddenText = findViewById(R.id.hiddenText)
+        hiddenText.visibility = View.INVISIBLE
 
         leftButton.text = "Hide"
         rightButton.text = "Show";
 
         leftButton.setOnClickListener {
             bearPicture.visibility = View.INVISIBLE
+            hiddenText.visibility = View.VISIBLE
+
         }
         rightButton.setOnClickListener {
             bearPicture.visibility = View.VISIBLE
+            hiddenText.visibility = View.INVISIBLE
+
         }
     }
 

@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openActivity(view: View) {
-        if (view is Button) {
-            println("It's a button!")
-        }
         var intent: Intent? = null
         when (view.id) {
             R.id.firstScreenButton -> {

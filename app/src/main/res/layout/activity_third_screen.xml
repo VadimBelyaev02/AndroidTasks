@@ -16,4 +16,20 @@
         app:navigationIcon="?android:attr/homeAsUpIndicator"
         app:popupTheme="?attr/actionBarPopupTheme"
         app:title="Third Window" />
+
+    <ImageView
+        android:id="@+id/bearPicture"
+        android:layout_width="200dp"
+        android:layout_height="279dp"
+        app:layout_constraintBottom_toTopOf="@id/commonButtonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdActivityToolbar"
+        app:srcCompat="@drawable/picture" />
+
+
+    <include
+        android:id="@+id/commonButtonsLayout"
+        layout="@layout/common_buttons"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,5 +23,10 @@
     
     <string name="leftButtonText">Left button</string>
     <string name="rightButtonText">Right button</string>
+
+    <string name="hiddenText">Hidden</string>
+
+    <dimen name="view_width">300px</dimen>
+    <dimen name="view_height">300px</dimen>
 </resources>
 
