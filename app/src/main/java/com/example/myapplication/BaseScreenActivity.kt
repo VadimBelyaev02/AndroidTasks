@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
-open class BaseScreenActivity : AppCompatActivity() {
+abstract class BaseScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,4 +19,6 @@ open class BaseScreenActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+  //  abstract fun onRightClicked(view: View);
 }

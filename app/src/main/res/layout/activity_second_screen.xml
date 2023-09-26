@@ -16,4 +16,9 @@
         app:navigationIcon="?android:attr/homeAsUpIndicator"
         app:popupTheme="?attr/actionBarPopupTheme"
         app:title="Second Window" />
+
+    <include
+        android:id="@+id/commonButtonsLayout"
+        layout="@layout/common_buttons"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
