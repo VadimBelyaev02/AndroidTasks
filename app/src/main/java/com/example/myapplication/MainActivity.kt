@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
         val redView = findViewById<View>(R.id.redView)
         val blueView = findViewById<View>(R.id.blueView)
 
-        redView.bringToFront()
-
 
         val screenHeight = resources.displayMetrics.heightPixels.toFloat()
         val screenWidth = resources.displayMetrics.widthPixels.toFloat()
