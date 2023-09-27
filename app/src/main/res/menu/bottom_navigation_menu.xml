@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_1"
+        android:enabled="true"
+        android:icon="@drawable/favorite_24"
+        android:title="@string/favoriteText"/>
+    <item
+        android:id="@+id/item_2"
+        android:enabled="true"
+        android:icon="@drawable/music_note_24"
+        android:title="@string/musicText"/>
+
+    <item
+        android:id="@+id/item_3"
+        android:enabled="true"
+        android:icon="@drawable/place_24"
+        android:title="@string/placeText"/>
+
+    <item
+        android:id="@+id/item_4"
+        android:enabled="true"
+        android:icon="@drawable/newspaper_24"
+        android:title="@string/newsText"/>
+
+
+</menu>

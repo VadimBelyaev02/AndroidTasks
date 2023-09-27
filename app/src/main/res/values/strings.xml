@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_activity_first_screen">FirstScreenActivity</string>
+
+    <string name="favoriteText">Favorite</string>
+    <string name="musicText">Music</string>
+    <string name="placeText">Places</string>
+    <string name="newsText">News</string>
 </resources>
