@@ -20,7 +20,9 @@
         <item name="android:textColor">#00F4E8</item>
 
     </style>
-    
+
+
+
     <string name="leftButtonText">Left button</string>
     <string name="rightButtonText">Right button</string>
 

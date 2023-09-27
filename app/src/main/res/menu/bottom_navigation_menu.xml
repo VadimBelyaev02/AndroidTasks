@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/favorite"
+        android:id="@+id/first"
         android:enabled="true"
         android:icon="@drawable/favorite_24"
         android:title="@string/favoriteText"/>
     <item
-        android:id="@+id/music"
+        android:id="@+id/second"
         android:enabled="true"
         android:icon="@drawable/music_note_24"
         android:title="@string/musicText"/>
 
     <item
-        android:id="@+id/places"
+        android:id="@+id/third"
         android:enabled="true"
         android:icon="@drawable/place_24"
         android:title="@string/placeText"/>
 
     <item
-        android:id="@+id/news"
+        android:id="@+id/fourth"
         android:enabled="true"
         android:icon="@drawable/newspaper_24"
         android:title="@string/newsText"/>
 
+    <item
+        android:id="@+id/fifth"
+        android:enabled="true"
+        android:icon="@drawable/restore_from_trash_24"
+        android:title="@string/newsText"/>
 
 </menu>

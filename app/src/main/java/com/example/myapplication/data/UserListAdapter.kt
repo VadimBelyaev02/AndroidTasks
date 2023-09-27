@@ -13,6 +13,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.ImageRequest
 import com.android.volley.toolbox.Volley
 import com.example.myapplication.R
+import com.example.myapplication.R.drawable.elona
 import com.example.myapplication.data.enums.Sex
 import com.squareup.picasso.Picasso
 
@@ -32,18 +33,22 @@ class UserListAdapter(private val context: Context, private val userList: List<U
         } else {
             holder.sexView.setImageResource(R.drawable.ic_female)
         }
-        val imageRequest = ImageRequest(
-            user.squareAvatarUrl,
-            { response -> holder.avatar.setImageBitmap(response) },
-            0,
-            0,
-            ImageView.ScaleType.CENTER_CROP,
-            Bitmap.Config.RGB_565,
-            { error -> error.printStackTrace() }
-        )
-        val requestQueue = Volley.newRequestQueue(context)
+//        val imageRequest = ImageRequest(
+//            user.squareAvatarUrl,
+//            { response -> holder.avatar.setImageBitmap(response) },
+//            0,
+//            0,
+//            ImageView.ScaleType.CENTER_CROP,
+//            Bitmap.Config.RGB_565,
+//            { error -> error.printStackTrace() }
+//        )
+  //      val requestQueue = Volley.newRequestQueue(context)
 
-        requestQueue.add(imageRequest)
+//        requestQueue.add(imageRequest)
+
+
+        holder.avatar.setImageResource(elona)
+
 
         holder.nameTextView.text = "${user.firstName} ${user.lastName}"
         holder.ageTextView.text = "Age: ${user.age}"
