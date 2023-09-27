@@ -4,51 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="295dp"
-        android:padding="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="25dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
-            tools:layout_editor_absoluteX="10dp" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="25dp"
-            app:layout_constraintBottom_toTopOf="@+id/button2" />
+            style="@style/textViewStyles"
+            android:background="@color/purple"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/textViewStyles"
+            android:background="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/textViewStyles"
+            android:background="@color/orange"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:id="@+id/button"
+            style="@style/buttonStyles"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

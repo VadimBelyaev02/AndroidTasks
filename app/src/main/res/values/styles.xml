@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonStyles">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:text">Button</item>
+        <item name="android:textSize">50px</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="textViewStyles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+    </style>
+</resources>
