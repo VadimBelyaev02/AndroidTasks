@@ -19,4 +19,11 @@
     <string name="secondScreenToolbarText">Second Window</string>
     <string name="thirdScreenToolbarText">Third Window</string>
 
+    <string name="bearPictureContentDescription">Just a bear</string>
+
+    <string name="leftButtonText">Left button</string>
+    <string name="rightButtonText">Right button</string>
+
+    <string name="hiddenText">Hidden</string>
+
 </resources>

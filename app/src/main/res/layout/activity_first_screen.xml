@@ -17,6 +17,7 @@
     <ImageView
         android:id="@+id/bearPicture"
         android:layout_width="200dp"
+        android:contentDescription="@string/bearPictureContentDescription"
         android:layout_height="279dp"
         app:layout_constraintBottom_toTopOf="@id/commonButtonsLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,10 +27,7 @@
 
     <TextView
         android:id="@+id/hiddenText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hiddenText"
-        android:textSize="100px"
+        style="@style/hiddenTextStyles"
         app:layout_constraintBottom_toTopOf="@id/commonButtonsLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
