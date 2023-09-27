@@ -9,9 +9,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="320dp"
-        android:layout_height="0dp"
-        android:background="#FF0000"
+        style="@style/constraintLayoutStyles"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,7 +18,7 @@
         <View
             android:id="@+id/view1"
             style="@style/commonSizes"
-            android:background="#98CB00"
+            android:background="@color/lightGreen"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +26,7 @@
         <View
             android:id="@+id/view2"
             style="@style/commonSizes"
-            android:background="#33B4E4"
+            android:background="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -36,7 +34,7 @@
         <View
             android:id="@+id/view3"
             style="@style/commonSizes"
-            android:background="#A966CB"
+            android:background="@color/purple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +44,7 @@
         <View
             android:id="@+id/view4"
             style="@style/commonSizes"
-            android:background="#000000"
+            android:background="@color/black"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +52,7 @@
             android:id="@+id/view5"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="#FE8700"
+            android:background="@color/orange"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
