@@ -10,7 +10,8 @@ import androidx.compose.ui.graphics.toArgb
 
 class MainActivity : AppCompatActivity() {
 
-    private val colors = arrayOf(Color.Black, Color.Blue, Color.Cyan, Color.Yellow, Color.Green, Color.Red, Color.Magenta, Color.LightGray,
+    private val colors = arrayOf(Color.Black, Color.Blue, Color.Cyan, Color.Yellow, Color.Green,
+        Color.Red, Color.Magenta, Color.LightGray,
         Color(79,3,0), Color(135, 0, 142))
 
     private lateinit var view: View
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        indexText = findViewById<TextView>(R.id.currentIndexText)
+        indexText = findViewById(R.id.currentIndexText)
         val previousButton = findViewById<Button>(R.id.previousButton)
         val nextButton = findViewById<Button>(R.id.nextButton)
         view = findViewById(R.id.customView)
