@@ -17,11 +17,12 @@ class FirstScreen : AppCompatActivity() {
         setContentView(R.layout.activity_first_screen)
 
         var userGenerator = UserGenerator()
+        people = arrayListOf()
         for (i in 1..30) {
             people += userGenerator.generateUser()
         }
 
-        val adapter = UserListAdapter(people)
+        val adapter = UserListAdapter(this, people)
         recyclerView = findViewById(R.id.users)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)

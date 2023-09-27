@@ -13,7 +13,7 @@ class UserGenerator {
         val lastName = lastNames.random()
         val age = Random.nextInt(18, 65)
         val sex = if (Random.nextBoolean()) Sex.MALE else Sex.FEMALE
-        val squareAvatarUrl = "https://example.com/avatar/$firstName$lastName.jpg"
+        val squareAvatarUrl = "https://image.cnbcfm.com/api/v1/image/105773423-1551716977818rtx6p9yw.jpg"
         val description = List(Random.nextInt(1, 5)) { generateRandomDescription() }
         return User(firstName, lastName, age, sex, squareAvatarUrl, description)
     }
