@@ -1,10 +1,16 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class BaseScreenActivity : AppCompatActivity() {
+
+    protected lateinit var leftButton: Button
+    protected lateinit var rightButton: Button
+    protected lateinit var toolbar: Toolbar
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -16,6 +22,4 @@ abstract class BaseScreenActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-  //  abstract fun onRightClicked(view: View);
 }

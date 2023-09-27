@@ -8,8 +8,7 @@ import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 
 class ThirdScreenActivity : BaseScreenActivity() {
-    private lateinit var leftButton: Button
-    private lateinit var rightButton: Button
+
     private lateinit var bearPicture: ImageView
     private var alphaLevel = 1.0f;
 
@@ -17,7 +16,7 @@ class ThirdScreenActivity : BaseScreenActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_screen)
 
-        val toolbar: Toolbar = findViewById(R.id.thirdActivityToolbar)
+        toolbar = findViewById(R.id.thirdActivityToolbar)
         toolbar.title = getString(R.string.thirdScreenToolbarText)
         setSupportActionBar(toolbar)
 

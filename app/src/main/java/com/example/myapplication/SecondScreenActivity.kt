@@ -14,8 +14,6 @@ import androidx.compose.ui.graphics.Color
 
 class SecondScreenActivity : BaseScreenActivity() {
 
-    private lateinit var leftButton: Button
-    private lateinit var rightButton: Button
     private lateinit var containerLayout: FrameLayout
     private var maxViewsPerLine: Int = 3
     private var maxViewsPerColumn: Int = 5
@@ -24,7 +22,7 @@ class SecondScreenActivity : BaseScreenActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_screen)
 
-        val toolbar: Toolbar = findViewById(R.id.secondActivityToolbar)
+        toolbar = findViewById(R.id.secondActivityToolbar)
         toolbar.title = getString(R.string.secondScreenToolbarText)
         setSupportActionBar(toolbar)
 
