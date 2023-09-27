@@ -14,29 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-        progressBar = findViewById(R.id.progressBar)
-        updateButton = findViewById(R.id.updateButton)
-
-        updateButton.setOnClickListener {
-            updateProgressBar()
-        }
     }
 
-    private fun updateProgressBar() {
 
-        val r = progressBar.rotation
-        val currentProgress = progressBar.progress
-        val newProgress = currentProgress + 10
-        if (newProgress <= progressBar.max) {
-            progressBar.progress = newProgress
-            progressBar.rotation = r - 15
-        }
-
-
-//        val randomProgress = Random.nextInt(1, 101)
-//        progressBar.animate().duration = 1000
-//        progressBar.setProgress(randomProgress, true)
-    }
 }
