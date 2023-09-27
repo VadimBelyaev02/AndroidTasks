@@ -20,14 +20,12 @@ class SecondScreenActivity : BaseScreenActivity() {
     private var maxViewsPerLine: Int = 3
     private var maxViewsPerColumn: Int = 5
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_screen)
 
         val toolbar: Toolbar = findViewById(R.id.secondActivityToolbar)
-        toolbar.title = "Second Window"
+        toolbar.title = getString(R.string.secondScreenToolbarText)
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -36,8 +34,8 @@ class SecondScreenActivity : BaseScreenActivity() {
         rightButton = findViewById(R.id.rightButton)
         containerLayout = findViewById(R.id.containerLayout)
 
-        leftButton.text = "Add"
-        rightButton.text = "Remove";
+        leftButton.text = getString(R.string.secondScreenLeftButtonText)
+        rightButton.text = getString(R.string.secondScreenRightButtonText);
 
         leftButton.setOnClickListener {
             addView()
@@ -45,9 +43,6 @@ class SecondScreenActivity : BaseScreenActivity() {
         rightButton.setOnClickListener {
             removeView()
         }
-
-
-
     }
 
     private fun addView() {
@@ -60,8 +55,6 @@ class SecondScreenActivity : BaseScreenActivity() {
 
         val view = View(this)
         view.setBackgroundColor(0xFF00FF00.toInt());
-        print(maxViewsPerLine)
-        print(maxViewsPerColumn)
         view.layoutParams = layoutParams
 
         val amountOfViews = containerLayout.childCount
@@ -69,10 +62,6 @@ class SecondScreenActivity : BaseScreenActivity() {
         val column = amountOfViews % maxViewsPerLine
 
         if (amountOfViews < maxViewsPerLine * maxViewsPerColumn) {
-            Log.d("S1", (row).toString())
-            Log.d("S2", (column).toString())
-            Log.d("S3", (amountOfViews).toString())
-            Log.d("B", (maxViewsPerLine * maxViewsPerColumn).toString())
             layoutParams.leftMargin = column * viewWidth
             layoutParams.topMargin = row * viewHeight
 

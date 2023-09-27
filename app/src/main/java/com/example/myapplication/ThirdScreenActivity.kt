@@ -18,7 +18,7 @@ class ThirdScreenActivity : BaseScreenActivity() {
         setContentView(R.layout.activity_third_screen)
 
         val toolbar: Toolbar = findViewById(R.id.thirdActivityToolbar)
-        toolbar.title = "Third Window"
+        toolbar.title = getString(R.string.thirdScreenToolbarText)
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -27,8 +27,8 @@ class ThirdScreenActivity : BaseScreenActivity() {
         leftButton = findViewById(R.id.leftButton)
         rightButton = findViewById(R.id.rightButton)
 
-        leftButton.text = "Increase alpha"
-        rightButton.text = "Decrease alpha"
+        leftButton.text = getString(R.string.thirdScreenLeftButtonText)
+        rightButton.text = getString(R.string.thirdScreenRightButtonText);
 
         leftButton.setOnClickListener {
             increaseAlpha()

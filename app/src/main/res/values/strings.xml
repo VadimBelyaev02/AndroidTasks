@@ -5,4 +5,18 @@
     <string name="firstScreenText">First screen</string>
     <string name="secondScreenText">Second screen</string>
     <string name="thirdScreenText">Third screen</string>
+
+    <string name="firstScreenLeftButtonText">Hide</string>
+    <string name="firstScreenRightButtonText">Show</string>
+
+    <string name="secondScreenLeftButtonText">Add</string>
+    <string name="secondScreenRightButtonText">Remove</string>
+
+    <string name="thirdScreenLeftButtonText">Increase alpha</string>
+    <string name="thirdScreenRightButtonText">Decrease alpha</string>
+
+    <string name="firstScreenToolbarText">First Window</string>
+    <string name="secondScreenToolbarText">Second Window</string>
+    <string name="thirdScreenToolbarText">Third Window</string>
+
 </resources>
