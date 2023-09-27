@@ -1,16 +1,9 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
 import android.view.View
-import android.view.ViewTreeObserver
-import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
-import androidx.appcompat.widget.Toolbar
-import androidx.compose.ui.graphics.Color
 
 class SecondScreenActivity : BaseScreenActivity() {
 

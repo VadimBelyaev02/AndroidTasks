@@ -6,7 +6,6 @@ import android.view.View
 
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.Toolbar
 
 class FirstScreenActivity : BaseScreenActivity() {
 
@@ -31,7 +30,7 @@ class FirstScreenActivity : BaseScreenActivity() {
         hiddenText.visibility = View.INVISIBLE
 
         leftButton.text = getString(R.string.firstScreenLeftButtonText)
-        rightButton.text = getString(R.string.firstScreenRightButtonText);
+        rightButton.text = getString(R.string.firstScreenRightButtonText)
 
         leftButton.setOnClickListener {
             bearPicture.visibility = View.INVISIBLE
