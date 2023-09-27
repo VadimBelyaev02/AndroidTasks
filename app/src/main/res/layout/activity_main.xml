@@ -8,10 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="729dp"
-        android:gravity="center"
-        android:orientation="vertical"
+        style="@style/linearLayoutMainContainer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,23 +17,21 @@
         <Button
             android:id="@+id/firstScreenButton"
             style="@style/mainScreenButtonStyles"
-
             android:layout_marginBottom="20dp"
             android:onClick="openActivity"
-            android:text="First screen" />
+            android:text="@string/firstScreenText" />
 
         <Button
             android:id="@+id/secondScreenButton"
             style="@style/mainScreenButtonStyles"
             android:layout_marginBottom="20dp"
-            android:text="Second screen"
             android:onClick="openActivity"
-            />
+            android:text="@string/secondScreenText" />
 
         <Button
             android:id="@+id/thirdScreenButton"
             style="@style/mainScreenButtonStyles"
             android:onClick="openActivity"
-            android:text="Third screen" />
+            android:text="@string/thirdScreenText" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

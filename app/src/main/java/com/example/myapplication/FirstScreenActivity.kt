@@ -23,6 +23,7 @@ class FirstScreenActivity : BaseScreenActivity() {
         setContentView(R.layout.activity_first_screen)
 
         val toolbar: Toolbar = findViewById(R.id.firstActivityToolbar)
+        toolbar.title = "First Window"
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -31,6 +32,7 @@ class FirstScreenActivity : BaseScreenActivity() {
         leftButton = findViewById(R.id.leftButton)
         rightButton = findViewById(R.id.rightButton)
         hiddenText = findViewById(R.id.hiddenText)
+
         hiddenText.visibility = View.INVISIBLE
 
         leftButton.text = "Hide"

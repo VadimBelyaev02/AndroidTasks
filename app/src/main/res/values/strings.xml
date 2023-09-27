@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_activity_first_screen">FirstScreenActivity</string>
+
+    <string name="firstScreenText">First screen</string>
+    <string name="secondScreenText">Second screen</string>
+    <string name="thirdScreenText">Third screen</string>
 </resources>

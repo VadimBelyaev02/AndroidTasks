@@ -12,7 +12,7 @@
 
     <Button
         android:id="@+id/leftButton"
-        style="@style/secondaryScreenButtonStyles"
+        style="@style/secondaryScreenButtonsCommonStyles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/leftButtonText" />
@@ -21,6 +21,6 @@
         android:id="@+id/rightButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/secondaryScreenButtonStyles"
+        style="@style/secondaryScreenButtonsCommonStyles"
         android:text="@string/rightButtonText" />
 </LinearLayout>

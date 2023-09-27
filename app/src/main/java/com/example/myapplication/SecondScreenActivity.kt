@@ -27,6 +27,7 @@ class SecondScreenActivity : BaseScreenActivity() {
         setContentView(R.layout.activity_second_screen)
 
         val toolbar: Toolbar = findViewById(R.id.secondActivityToolbar)
+        toolbar.title = "Second Window"
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

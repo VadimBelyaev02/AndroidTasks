@@ -6,20 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".SecondScreenActivity">
 
-    <androidx.appcompat.widget.Toolbar
+
+    <include
         android:id="@+id/secondActivityToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?android:attr/homeAsUpIndicator"
-        app:popupTheme="?attr/actionBarPopupTheme"
-        app:title="Second Window" />
+        layout="@layout/toolbar" />
 
     <include
         android:id="@+id/commonButtonsLayout"
-        layout="@layout/common_buttons"/>
+        layout="@layout/common_buttons" />
 
     <FrameLayout
         android:id="@+id/containerLayout"
@@ -28,7 +22,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/secondActivityToolbar">
-        <!--        app:layout_constraintBottom_toTopOf="@id/commonButtonsLayout"-->
 
     </FrameLayout>
 

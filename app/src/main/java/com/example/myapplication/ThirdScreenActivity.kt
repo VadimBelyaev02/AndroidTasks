@@ -18,6 +18,7 @@ class ThirdScreenActivity : BaseScreenActivity() {
         setContentView(R.layout.activity_third_screen)
 
         val toolbar: Toolbar = findViewById(R.id.thirdActivityToolbar)
+        toolbar.title = "Third Window"
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
