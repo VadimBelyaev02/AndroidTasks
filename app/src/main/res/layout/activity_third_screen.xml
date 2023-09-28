@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ThirdScreen">
 
-    <include layout="@layout/toolbar"/>
-
+    <include
+        android:id="@+id/thirdActivityToolbar"
+        layout="@layout/toolbar"/>
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

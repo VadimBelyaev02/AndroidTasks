@@ -6,4 +6,9 @@
     <string name="musicText">Music</string>
     <string name="placeText">Places</string>
     <string name="newsText">News</string>
+    
+
+    <string name="firstScreenToolbarText">First Window</string>
+    <string name="secondScreenToolbarText">Second Window</string>
+    <string name="thirdScreenToolbarText">Third Window</string>
 </resources>

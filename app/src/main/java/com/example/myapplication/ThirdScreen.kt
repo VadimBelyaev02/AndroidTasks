@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.compose.ui.graphics.Color
 
 class ThirdScreen : AppCompatActivity() {
@@ -26,5 +27,9 @@ class ThirdScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_screen)
+
+        val toolbar = findViewById<Toolbar>(R.id.thirdActivityToolbar)
+        toolbar.title = getString(R.string.thirdScreenToolbarText)
+        setSupportActionBar(toolbar)
     }
 }
