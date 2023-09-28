@@ -21,6 +21,11 @@
 
     </style>
 
+    <style name="tableElementStyles">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
 
 
     <string name="leftButtonText">Left button</string>

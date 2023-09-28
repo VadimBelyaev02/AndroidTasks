@@ -7,9 +7,10 @@
     app:cardBackgroundColor="#CDE8E2"
     app:cardCornerRadius="10sp">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:padding="16dp">
 
         <ImageView
@@ -17,7 +18,7 @@
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
-            android:alpha="0.5f"
+            android:alpha="0.5"
             android:background="#CCE7E1"
             android:contentDescription="Icon"
             android:src="@drawable/person_add_90" />
@@ -28,9 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_centerInParent="true"
             android:text="Some text"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
-    </RelativeLayout>
+    </FrameLayout>
 </androidx.cardview.widget.CardView>
