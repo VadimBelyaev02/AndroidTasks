@@ -20,6 +20,7 @@ class FirstScreen : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.firstActivityToolbar)
         toolbar.title = getString(R.string.firstScreenToolbarText)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var userGenerator = UserGenerator()
         people = arrayListOf()

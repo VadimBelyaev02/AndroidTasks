@@ -13,5 +13,7 @@ class SecondScreen : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.secondActivityToolbar)
         toolbar.title = getString(R.string.secondScreenToolbarText)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
     }
 }

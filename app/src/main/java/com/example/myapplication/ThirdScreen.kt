@@ -31,5 +31,7 @@ class ThirdScreen : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.thirdActivityToolbar)
         toolbar.title = getString(R.string.thirdScreenToolbarText)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
     }
 }
