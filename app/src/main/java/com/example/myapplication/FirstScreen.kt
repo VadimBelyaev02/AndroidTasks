@@ -21,6 +21,9 @@ class FirstScreen : AppCompatActivity() {
         toolbar.title = getString(R.string.firstScreenToolbarText)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 
         var userGenerator = UserGenerator()
         people = arrayListOf()

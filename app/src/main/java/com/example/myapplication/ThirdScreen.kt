@@ -2,10 +2,14 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TableLayout
+import android.widget.TableRow
 import androidx.appcompat.widget.Toolbar
 import androidx.compose.ui.graphics.Color
 
 class ThirdScreen : AppCompatActivity() {
+
+    val elementsAmount = 20
 
     private var texts = arrayOf(
         "MY DOCTOR",
@@ -24,6 +28,7 @@ class ThirdScreen : AppCompatActivity() {
         Color(242, 125, 29)
     )
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_screen)
@@ -32,6 +37,13 @@ class ThirdScreen : AppCompatActivity() {
         toolbar.title = getString(R.string.thirdScreenToolbarText)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 
+        val tableLayout = findViewById<TableLayout>(R.id.table)
+        val newRow = TableRow(this)
+
+        newRow.add
     }
 }

@@ -25,6 +25,9 @@
         <item name="android:layout_height">100dp</item>
         <item name="android:layout_width">150dp</item>
         <item name="android:layout_margin">8dp</item>
+        <item name="layout">@layout/table_card</item>
+        <!--                layout="@layout/table_card"-->
+
     </style>
 
 

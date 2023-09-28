@@ -9,11 +9,12 @@ class SecondScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_screen)
 
-//
         val toolbar = findViewById<Toolbar>(R.id.secondActivityToolbar)
         toolbar.title = getString(R.string.secondScreenToolbarText)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 }
