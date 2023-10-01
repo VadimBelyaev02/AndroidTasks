@@ -11,4 +11,7 @@
     <string name="firstScreenToolbarText">First Window</string>
     <string name="secondScreenToolbarText">Second Window</string>
     <string name="thirdScreenToolbarText">Third Window</string>
+
+    <string name="cardIconDescription">Icon</string>
+    <string name="cardText">Card text</string>
 </resources>

@@ -30,6 +30,39 @@
 
     </style>
 
+    <style name="cardViewStyles">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="cardBackgroundColor">#CDE8E2</item>
+        <item name="android:background">#8BC34A</item>
+        <item name="android:layout_margin">16dp</item>
+
+        <item name="cardCornerRadius">10sp</item>
+    </style>
+
+    <style name="cardFrameLayoutStyles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="cardImageViewStyles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.1</item>
+        <item name="android:background">#CCE7E1</item>
+        <item name="android:contentDescription">@string/cardIconDescription</item>
+        <item name="android:src">@drawable/person_add_90</item>
+    </style>
+
+    <style name="cardTextViewStyles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:text">@string/cardText</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
 
     <string name="leftButtonText">Left button</string>
     <string name="rightButtonText">Right button</string>

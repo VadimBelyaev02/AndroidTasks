@@ -8,56 +8,24 @@
 
     <include
         android:id="@+id/thirdActivityToolbar"
-        layout="@layout/toolbar"/>
-    <TableLayout
-        android:id="@+id/table"
+        layout="@layout/toolbar" />
 
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        app:layout_constraintTop_toBottomOf="@+id/thirdActivityToolbar">
 
-
-<!--                <TableRow-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
-
-
-<!--            <include-->
-<!--                layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"-->
-<!--                />-->
-
-<!--            <include layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"-->
-<!--                />-->
-<!--        </TableRow>-->
-
-<!--        <TableRow-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <include layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"/>-->
-
-<!--            <include layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"/>-->
-
-<!--        </TableRow>-->
-
-<!--        <TableRow-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <include layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"/>-->
-
-<!--            <include layout="@layout/table_card"-->
-<!--                style="@style/tableElementStyles"/>-->
-
-<!--        </TableRow>-->
-
-    </TableLayout>
+        <GridLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:columnCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thirdActivityToolbar"></GridLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
