@@ -18,7 +18,7 @@
             android:name=".FifthScreen"
             android:exported="false" />
         <activity
-            android:name=".FourthActivityScreen"
+            android:name=".FourthScreen"
             android:exported="false" />
         <activity
             android:name=".ThirdScreen"

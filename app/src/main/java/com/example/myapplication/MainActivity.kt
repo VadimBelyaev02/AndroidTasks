@@ -7,8 +7,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    //    private lateinit var progressBar: ProgressBar
-//    private lateinit var updateButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,7 +33,12 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.fourth -> {
-                    intent = Intent(this, FourthActivityScreen::class.java)
+                    intent = Intent(this, FourthScreen::class.java)
+                    startActivity(intent)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.fifth -> {
+                    intent = Intent(this, FifthScreen::class.java)
                     startActivity(intent)
                     return@setOnItemSelectedListener true
                 }

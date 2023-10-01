@@ -16,4 +16,6 @@
 
     <string name="cardIconDescription">Icon</string>
     <string name="cardText">Card text</string>
+
+    <string name="emptyViewText">There are no users</string>
 </resources>
