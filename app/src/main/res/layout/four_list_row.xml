@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+<!--    <include-->
+<!--        android:id="@+id/leftSquare"-->
+<!--        layout="@layout/square"-->
+<!--        />-->
+<!--    <include-->
+<!--        android:id="@+id/rectangle"-->
+<!--        layout="@layout/rectangle"-->
+<!--        />-->
+<!--    <include-->
+<!--        android:id="@+id/rightSquare"-->
+<!--        layout="@layout/square"/>-->
+
+
+    <LinearLayout
+        android:id="@+id/leftSquare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#183AEC" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#E717F6">
+
+        </View>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toEndOf="@id/leftSquare"
+        app:layout_constraintEnd_toStartOf="@id/rightSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00FFCC"
+
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/rightSquare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#183AEC" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#E717F6">
+
+        </View>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

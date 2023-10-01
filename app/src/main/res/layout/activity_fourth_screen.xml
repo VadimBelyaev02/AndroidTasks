@@ -4,23 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdScreen">
+    tools:context=".FourthActivityScreen">
+
 
     <include
-        android:id="@+id/thirdActivityToolbar"
+        android:id="@+id/fourthActivityToolbar"
         layout="@layout/toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardRecyclerView"
+        android:id="@+id/fourthScreenRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingEnd="8dp"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="75dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdActivityToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/fourthActivityToolbar">
     </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

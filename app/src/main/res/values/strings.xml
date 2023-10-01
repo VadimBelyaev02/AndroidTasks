@@ -6,11 +6,13 @@
     <string name="musicText">Music</string>
     <string name="placeText">Places</string>
     <string name="newsText">News</string>
-    
+
 
     <string name="firstScreenToolbarText">First Window</string>
     <string name="secondScreenToolbarText">Second Window</string>
     <string name="thirdScreenToolbarText">Third Window</string>
+    <string name="fourthScreenToolbarText">Fourth Window</string>
+    <string name="fifthScreenToolbarText">Fifth Window</string>
 
     <string name="cardIconDescription">Icon</string>
     <string name="cardText">Card text</string>

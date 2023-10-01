@@ -34,6 +34,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     return@setOnItemSelectedListener true
                 }
+                R.id.fourth -> {
+                    intent = Intent(this, FourthActivityScreen::class.java)
+                    startActivity(intent)
+                    return@setOnItemSelectedListener true
+                }
             }
             false
         }
