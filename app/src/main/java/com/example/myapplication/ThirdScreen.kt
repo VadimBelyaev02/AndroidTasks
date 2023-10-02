@@ -2,24 +2,12 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import androidx.cardview.widget.CardView
-import androidx.compose.ui.graphics.Color
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Util.CardGenerator
-import com.example.myapplication.data.Card
-import com.example.myapplication.data.CardListAdapter
-import com.example.myapplication.data.UserListAdapter
+import com.example.myapplication.model.Card
+import com.example.myapplication.adapter.ThirdScreenAdapter
 
 class ThirdScreen : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -45,7 +33,7 @@ class ThirdScreen : AppCompatActivity() {
         for (i in 1..elementsAmount) {
             cards += cardGenerator.generateCard(i)
         }
-        val adapter = CardListAdapter(cards)
+        val adapter = ThirdScreenAdapter(cards)
         recyclerView = findViewById(R.id.cardRecyclerView)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(this, 2)

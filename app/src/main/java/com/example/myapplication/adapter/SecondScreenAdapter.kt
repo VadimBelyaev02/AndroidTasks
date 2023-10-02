@@ -1,4 +1,4 @@
-package com.example.myapplication.data
+package com.example.myapplication.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,17 +7,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.myapplication.R
-import com.example.myapplication.R.drawable.elona
-import com.example.myapplication.data.enums.Sex
+import com.example.myapplication.model.User
+import com.example.myapplication.model.enums.Sex
 
-class UserListAdapter(private val context: Context, private val userList: List<User>) :
-    RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
+class SecondScreenAdapter(private val context: Context, private val userList: List<User>) :
+    RecyclerView.Adapter<SecondScreenAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.first_screen_list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.second_screen_list_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -37,16 +36,17 @@ class UserListAdapter(private val context: Context, private val userList: List<U
 //            Bitmap.Config.RGB_565,
 //            { error -> error.printStackTrace() }
 //        )
-  //      val requestQueue = Volley.newRequestQueue(context)
+        //      val requestQueue = Volley.newRequestQueue(context)
 
 //        requestQueue.add(imageRequest)
 
 
-        holder.avatar.setImageResource(elona)
+        holder.avatar.setImageResource(R.drawable.elona)
 
 
         holder.nameTextView.text = "${user.firstName} ${user.lastName}"
         holder.ageTextView.text = "Age: ${user.age}"
+        holder.description.text = "${user.description}"
     }
 
     override fun getItemCount(): Int {
@@ -58,7 +58,6 @@ class UserListAdapter(private val context: Context, private val userList: List<U
         val sexView: ImageView = itemView.findViewById(R.id.sexIcon)
         val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         val ageTextView: TextView = itemView.findViewById(R.id.ageTextView)
+        val description: TextView = itemView.findViewById(R.id.descriptionTextView)
     }
-
-
 }

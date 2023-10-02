@@ -6,9 +6,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Util.UserGenerator
-import com.example.myapplication.data.SecondScreenAdapter
-import com.example.myapplication.data.User
-import com.example.myapplication.data.UserListAdapter
+import com.example.myapplication.adapter.SecondScreenAdapter
+import com.example.myapplication.model.User
 
 class SecondScreen : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView

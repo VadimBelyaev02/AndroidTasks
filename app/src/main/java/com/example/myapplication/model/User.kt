@@ -1,6 +1,6 @@
-package com.example.myapplication.data
+package com.example.myapplication.model
 
-import com.example.myapplication.data.enums.Sex
+import com.example.myapplication.model.enums.Sex
 
 data class User(
     val firstName: String,

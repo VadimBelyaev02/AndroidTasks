@@ -1,7 +1,7 @@
 package com.example.myapplication.Util
 
-import com.example.myapplication.data.User
-import com.example.myapplication.data.enums.Sex
+import com.example.myapplication.model.User
+import com.example.myapplication.model.enums.Sex
 import kotlin.random.Random
 
 class UserGenerator {
@@ -18,6 +18,13 @@ class UserGenerator {
         return User(firstName, lastName, age, sex, squareAvatarUrl, description)
     }
 
+    fun generateUserLit(): List<User> {
+        val people = arrayListOf<User>()
+        for (i in 1..30) {
+            people += generateUser()
+        }
+        return people
+    }
     private fun generateRandomDescription(): String {
         val sentences = listOf(
             "Lorem ipsum dolor sit amet.",

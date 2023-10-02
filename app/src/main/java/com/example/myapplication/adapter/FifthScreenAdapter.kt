@@ -1,4 +1,4 @@
-package com.example.myapplication.data
+package com.example.myapplication.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.example.myapplication.R
 import com.example.myapplication.R.drawable.elona
-import com.example.myapplication.data.enums.Sex
+import com.example.myapplication.model.User
+import com.example.myapplication.model.enums.Sex
 
 class FifthScreenAdapter(private val context: Context, private var userList: List<User>) :
     RecyclerView.Adapter<FifthScreenAdapter.ViewHolder>() {

@@ -1,4 +1,4 @@
-package com.example.myapplication.data
+package com.example.myapplication.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import com.example.myapplication.R
 class FourthScreenAdapter(private val numberOfElements : Int) :
     RecyclerView.Adapter<FourthScreenAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FourthScreenAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val cardView = LayoutInflater.from(parent.context).inflate(R.layout.four_screen_list_item, parent, false)
         return ViewHolder(cardView)
     }

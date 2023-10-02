@@ -6,12 +6,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Util.UserGenerator
-import com.example.myapplication.data.User
-import com.example.myapplication.data.UserListAdapter
+import com.example.myapplication.model.User
+import com.example.myapplication.adapter.FirstScreenAdapter
 
 class FirstScreen : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
-
     private lateinit var people: List<User>;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +25,8 @@ class FirstScreen : AppCompatActivity() {
         }
 
         var userGenerator = UserGenerator()
-        people = arrayListOf()
-        for (i in 1..30) {
-            people += userGenerator.generateUser()
-        }
-
-        val adapter = UserListAdapter(this, people)
+        people = userGenerator.generateUserLit()
+        val adapter = FirstScreenAdapter(this, people)
         recyclerView = findViewById(R.id.users)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)

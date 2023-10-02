@@ -2,7 +2,7 @@ package com.example.myapplication.Util
 
 import androidx.compose.ui.graphics.Color
 import com.example.myapplication.R
-import com.example.myapplication.data.Card
+import com.example.myapplication.model.Card
 
 class CardGenerator {
 

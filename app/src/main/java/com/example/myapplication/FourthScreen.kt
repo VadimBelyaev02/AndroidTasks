@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.data.FourthScreenAdapter
+import com.example.myapplication.adapter.FourthScreenAdapter
 
 class FourthScreen : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
