@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circular_progress.xml -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
+    <item android:id="@android:id/background">
         <shape
-            android:innerRadiusRatio="2.8"
+            android:innerRadiusRatio="3"
             android:shape="ring"
-            android:thicknessRatio="10.0"
+            android:thicknessRatio="15.0"
             android:useLevel="false">
             <solid android:color="#CCCCCC" />
         </shape>
     </item>
-
     <item android:id="@android:id/progress">
         <rotate
-            android:fromDegrees="240"
-            android:toDegrees="500"
-            android:interpolator="@android:anim/linear_interpolator"
-            android:duration="1000">
+            android:fromDegrees="0"
+            android:toDegrees="360">
             <shape
-                android:innerRadiusRatio="3.0"
+                android:innerRadiusRatio="3"
                 android:shape="ring"
-                android:thicknessRatio="7.0"
+                android:thicknessRatio="15.0"
                 android:useLevel="true">
-                <solid android:color="#FF5733" />
+                <solid android:color="#FF0000" />
             </shape>
         </rotate>
     </item>
