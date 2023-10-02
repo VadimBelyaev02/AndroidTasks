@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    private var progress = 0;
+    private var progress = 0
     private lateinit var progressBar: ProgressBar
     private lateinit var updateButton: Button
 
