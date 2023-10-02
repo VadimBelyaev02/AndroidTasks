@@ -11,41 +11,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        var intent: Intent? = null
+        var bottomNavigation = findViewById<BottomNavigationView>(R.id.mainBottomNavigation)
 
         bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.first -> {
-                    intent = Intent(this, FirstScreen::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-
-                R.id.second -> {
-                    intent = Intent(this, SecondScreen::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.third -> {
-                    intent = Intent(this, ThirdScreen::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.fourth -> {
-                    intent = Intent(this, FourthScreen::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.fifth -> {
-                    intent = Intent(this, FifthScreen::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
+            val intentClass = when (item.itemId) {
+                R.id.first -> FirstScreen::class.java
+                R.id.second -> SecondScreen::class.java
+                R.id.third -> ThirdScreen::class.java
+                R.id.fourth -> FourthScreen::class.java
+                R.id.fifth -> FifthScreen::class.java
+                else -> null
             }
-            false
+
+            intentClass?.let { startActivity(Intent(this, it)) }
+
+            return@setOnItemSelectedListener intentClass != null
         }
-
-
     }
 }

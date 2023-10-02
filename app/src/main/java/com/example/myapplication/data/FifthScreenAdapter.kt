@@ -1,5 +1,6 @@
 package com.example.myapplication.data
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,7 @@ import com.example.myapplication.R
 import com.example.myapplication.R.drawable.elona
 import com.example.myapplication.data.enums.Sex
 
-class FifthScreenAdapter(private val context: Context, private val userList: List<User>) :
+class FifthScreenAdapter(private val context: Context, private var userList: List<User>) :
     RecyclerView.Adapter<FifthScreenAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -58,5 +59,22 @@ class FifthScreenAdapter(private val context: Context, private val userList: Lis
         val sexView: ImageView = itemView.findViewById(R.id.sexIcon)
         val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         val ageTextView: TextView = itemView.findViewById(R.id.ageTextView)
+    }
+
+    fun clear() {
+        val size = userList.size
+        this.userList = mutableListOf()
+        notifyItemRangeRemoved(0, size)
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun update(users: List<User>) {
+//        if (users.size > userList.size) {
+//            notifyItemRangeRemoved(userList.size, )
+//        }
+//        this.userList = users
+//        notifyItemRangeInserted(0, userList.size)
+        this.userList = users
+        notifyDataSetChanged()
     }
 }

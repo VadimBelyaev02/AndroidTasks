@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/secondScreenAvatarWrapper"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/avatar"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Avatar"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondScreenDetailsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintWidth_default="spread"
+        app:layout_constraintEnd_toStartOf="@id/sexIcon"
+        app:layout_constraintStart_toEndOf="@id/secondScreenAvatarWrapper"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:text="Name Surname"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Age"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Age"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/ageTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/sexIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="Sex"
+        android:src="@drawable/ic_male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

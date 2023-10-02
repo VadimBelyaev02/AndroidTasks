@@ -8,26 +8,36 @@
 
     <include
         android:id="@+id/fifthActivityToolbar"
-        layout="@layout/toolbar"/>
+        layout="@layout/toolbar" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar"
-        android:visibility="visible"/>
+        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fifthRecyclerView"
-
-        android:layout_width="wrap_content"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fifthRecyclerView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -37,14 +47,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/fifth_screen_menu" />
-    
+
     <TextView
         android:id="@+id/emptyView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emptyViewText"
+        android:textSize="20sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
-        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fifthActivityToolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

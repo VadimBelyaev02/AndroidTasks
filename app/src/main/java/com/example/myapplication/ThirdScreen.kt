@@ -39,10 +39,6 @@ class ThirdScreen : AppCompatActivity() {
             onBackPressed()
         }
 
-//        val adapter = UserListAdapter(this, people)
-//        recyclerView = findViewById(R.id.users)
-//        recyclerView.adapter = adapter
-//        recyclerView.layoutManager = LinearLayoutManager(this)
 
         val cards = arrayListOf<Card>()
         val cardGenerator = CardGenerator()

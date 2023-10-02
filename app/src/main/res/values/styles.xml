@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="mainScreenButtonStyles">
+
+    <style name="MainScreen">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="MainScreen.LinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MainScreen.NavigationBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MainScreen.mainScreenButtonStyles">
         <item name="android:textColor">#F2C500</item>
         <item name="android:textSize">22dp</item>
         <item name="android:padding">10dp</item>
@@ -8,7 +24,7 @@
         <item name="android:layout_width">175dp</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    
+
     <style name="secondaryScreenButtonStyles">
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">wrap_content</item>
