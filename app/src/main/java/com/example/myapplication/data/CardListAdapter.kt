@@ -1,6 +1,5 @@
 package com.example.myapplication.data
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import com.example.myapplication.R
 class CardListAdapter(private val cardList: List<Card>):
     RecyclerView.Adapter<CardListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardListAdapter.ViewHolder {
-        val cardView = LayoutInflater.from(parent.context).inflate(R.layout.table_card, parent, false)
+        val cardView = LayoutInflater.from(parent.context).inflate(R.layout.third_screen_table_card, parent, false)
         return ViewHolder(cardView)
     }
 

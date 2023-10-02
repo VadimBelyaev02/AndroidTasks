@@ -27,6 +27,5 @@
         android:id="@+id/fifth"
         android:enabled="true"
         android:icon="@drawable/restore_from_trash_24"
-        android:title="@string/newsText"/>
-
+        android:title="@string/trashText"/>
 </menu>

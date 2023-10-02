@@ -6,6 +6,7 @@
     <string name="musicText">Music</string>
     <string name="placeText">Places</string>
     <string name="newsText">News</string>
+    <string name="trashText">Trash</string>
 
 
     <string name="firstScreenToolbarText">First Window</string>
@@ -18,4 +19,7 @@
     <string name="cardText">Card text</string>
 
     <string name="emptyViewText">There are no users</string>
+
+    <string name="avatarDescription">Avatar</string>
+    <string name="sex">Sex</string>
 </resources>

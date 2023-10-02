@@ -1,54 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    style="@style/SecondScreenListItem"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FirstScreenListItem"
     android:orientation="horizontal">
 
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/secondScreenAvatarContainer"
-        style="@style/SecondScreenListItem.AvatarContainer"
+        android:id="@+id/firstScreenAvatarWrapper"
+        style="@style/FirstScreenListItem.AvatarCardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/avatar"
-            style="@style/SecondScreenListItem.Avatar" />
+            style="@style/FirstScreenListItem.AvatarImageView"/>
     </androidx.cardview.widget.CardView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/secondScreenDetailsContainer"
-        style="@style/SecondScreenListItem.DetailsContainer"
-        app:layout_constraintEnd_toStartOf="@id/sexIcon"
-        app:layout_constraintStart_toEndOf="@id/secondScreenAvatarContainer"
+        android:id="@+id/detailsContainer"
+        style="@style/FirstScreenListItem.DetailsContainer"
+        app:layout_constraintWidth_default="spread"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_default="spread">
+        app:layout_constraintEnd_toStartOf="@id/sexIcon"
+        app:layout_constraintStart_toEndOf="@id/firstScreenAvatarWrapper">
 
         <TextView
             android:id="@+id/nameTextView"
-            style="@style/SecondScreenListItem.Name"
+            style="@style/FirstScreenListItem.Name"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/ageTextView"
-            style="@style/SecondScreenListItem.Age"
+            style="@style/FirstScreenListItem.Age"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nameTextView" />
-
-        <TextView
-            android:id="@+id/descriptionTextView"
-            style="@style/SecondScreenListItem.Description"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ageTextView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <ImageView
         android:id="@+id/sexIcon"
-        style="@style/SecondScreenListItem.Sex"
+        style="@style/FirstScreenListItem.Sex"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

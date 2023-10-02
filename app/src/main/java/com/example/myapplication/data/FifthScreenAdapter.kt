@@ -18,7 +18,7 @@ class FifthScreenAdapter(private val context: Context, private var userList: Lis
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.user_list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.first_screen_list_item, parent, false)
         return ViewHolder(view)
     }
 

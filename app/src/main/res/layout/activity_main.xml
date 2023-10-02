@@ -17,6 +17,6 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/mainBottomNavigation"
             style="@style/MainScreen.NavigationBar"
-            app:menu="@menu/bottom_navigation_menu" />
+            app:menu="@menu/main_screen_menu" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
