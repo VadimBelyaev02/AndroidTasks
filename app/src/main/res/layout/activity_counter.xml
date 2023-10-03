@@ -2,24 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/FirstScreen"
+    style="@style/CounterScreen"
     tools:context=".Counter">
 
 
     <com.example.myapplication.CounterView
         android:id="@+id/counterView"
-        style="@style/FirstScreen.CounterView"
-  />
+        style="@style/CounterScreen.CounterView" />
 
     <TextView
         android:id="@+id/counterTextView"
-        style="@style/FirstScreen.TextView"
-        />
+        style="@style/CounterScreen.TextView" />
 
     <Button
         android:id="@+id/counterButton"
-        style="@style/FirstScreen.Button"
-/>
-
-
+        style="@style/CounterScreen.Button" />
 </RelativeLayout>

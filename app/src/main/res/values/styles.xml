@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="FirstScreen">
+    <style name="CounterScreen">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
 
-    <style name="FirstScreen.Button">
+    <style name="CounterScreen.Button">
         <item name="android:layout_width">75dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:layout_alignBottom">@+id/counterView</item>
@@ -16,7 +16,7 @@
         <item name="android:background">@drawable/rounded_button</item>
     </style>
 
-    <style name="FirstScreen.TextView">
+    <style name="CounterScreen.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">0</item>
@@ -25,10 +25,15 @@
         <item name="android:layout_alignTop">@id/counterView</item>
     </style>
 
-    <style name="FirstScreen.CounterView">
+    <style name="CounterScreen.CounterView">
         <item name="android:layout_width">225dp</item>
         <item name="android:layout_height">225dp</item>
         <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="CounterScreen.UpdateCounterScreen">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 </resources>
 
