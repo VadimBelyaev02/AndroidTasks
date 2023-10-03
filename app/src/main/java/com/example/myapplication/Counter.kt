@@ -27,6 +27,7 @@ class Counter : AppCompatActivity() {
             }
         }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_counter)
@@ -35,10 +36,9 @@ class Counter : AppCompatActivity() {
         counterView = findViewById(R.id.counterView)
         counterTextView = findViewById(R.id.counterTextView)
 
-        val savedValue = savedInstanceState?.getString("counterValue", "0")?.toInt()?:0
+        val savedValue = savedInstanceState?.getInt("counterValue", 0) ?:0
 
         counterView.value = savedValue
-        Log.d("PIZDA", savedValue.toString())
         counterTextView.text = savedValue.toString()
 
 
@@ -76,14 +76,13 @@ class Counter : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("storage", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("textCounter", counterView.value)
-        Log.d("HUI", counterView.value.toString())
         editor.apply()
     }
 
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
         outState.run {
-            putString("counterValue", counterView.value.toString())
+            putInt("counterValue", counterView.value)
         }
     }
 }
