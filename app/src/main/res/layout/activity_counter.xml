@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FirstScreen"
+    tools:context=".Counter">
+
+
+    <com.example.myapplication.CounterView
+        android:id="@+id/counterView"
+        style="@style/FirstScreen.CounterView"
+  />
+
+    <TextView
+        android:id="@+id/counterTextView"
+        style="@style/FirstScreen.TextView"
+        />
+
+    <Button
+        android:id="@+id/counterButton"
+        style="@style/FirstScreen.Button"
+/>
+
+
+</RelativeLayout>

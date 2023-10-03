@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="title_activity_first_screen">FirstScreenActivity</string>
+    <string name="tap">Tap</string>
 </resources>
