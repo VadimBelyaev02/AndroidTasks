@@ -11,6 +11,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     private var time = 0
     private val toastDelayMillis: Long = 10000
     private val handler = Handler(Looper.getMainLooper())
+    private val coroutineScope = CoroutineScope(Dispatchers.Default)
+    private val shipGenerator = ShipGenerator(this)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,43 +31,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         label = findViewById(R.id.label)
-
-        startChronometer()
-
-    }
-
-    private fun startChronometer() {
-        Thread {
-            while (true) {
-                time++
-                Thread.sleep(1000)
-                handler.post {
-                    label.text = time.toString()
-                }
+        Thread.sleep(15000)
+        val numberOfShips = 10
+        for (i in 1..numberOfShips) {
+            coroutineScope.launch {
+                shipGenerator.generateShip(label)
             }
-        }.start()
-
-        Thread {
-            while (true) {
-                toastTime++
-                Thread.sleep(toastDelayMillis)
-                if (toastTime % 4 != 0) {
-                    handler.post {
-                        Toast.makeText(this, time.toString(), Toast.LENGTH_LONG).show()
-                    }
-                }
-
-            }
-        }.start()
-
-        Thread {
-            while (true) {
-                Thread.sleep(toastDelayMillis * 4)
-                handler.post {
-                    Toast.makeText(this, "Surprise", Toast.LENGTH_LONG).show()
-                }
-            }
-        }.start()
+        }
     }
 
 }

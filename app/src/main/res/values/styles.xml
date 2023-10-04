@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="CounterScreen">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="CounterScreen.Button">
-        <item name="android:layout_width">75dp</item>
-        <item name="android:layout_height">75dp</item>
-        <item name="android:layout_alignBottom">@+id/counterView</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:text">@string/tap</item>
-        <item name="android:layout_marginBottom">15dp</item>
-        <item name="android:background">@drawable/rounded_button</item>
-    </style>
-
-    <style name="CounterScreen.TextView">
+    <style name="FirstColumn">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">0</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginTop">15dp</item>
-        <item name="android:layout_alignTop">@id/counterView</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
     </style>
 
-    <style name="CounterScreen.CounterView">
-        <item name="android:layout_width">225dp</item>
-        <item name="android:layout_height">225dp</item>
-        <item name="android:layout_centerInParent">true</item>
-    </style>
-
-    <style name="CounterScreen.UpdateCounterScreen">
-        <item name="android:layout_width">match_parent</item>
+    <style name="SecondColumn">
+        <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:paddingStart">50dp</item>
     </style>
 </resources>
 

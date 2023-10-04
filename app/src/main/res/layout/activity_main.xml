@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/CounterScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/zero"
-        android:textSize="40sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
 
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label"
+                style="@style/FirstColumn"
+                android:text="Console: " />
+
+            <TextView
+                style="@style/SecondColumn"
+
+                android:text="0" />
+        </LinearLayout>
+    </ScrollView>
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/shipsInTunnel"-->
+    <!--            style="@style/FirstColumn"-->
+    <!--            android:text="Numbers of ships in the tunnel: " />-->
+
+    <!--        <TextView-->
+    <!--            style="@style/SecondColumn"-->
+    <!--            android:text="0" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/numberOfShipsInTheTunnel"-->
+    <!--            style="@style/FirstColumn"-->
+    <!--            android:text="Ships ids in the tunnel: " />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/shipTunnel"-->
+    <!--            style="@style/SecondColumn"-->
+    <!--            android:text="0" />-->
+    <!--    </LinearLayout>-->
+
+
+</LinearLayout>
