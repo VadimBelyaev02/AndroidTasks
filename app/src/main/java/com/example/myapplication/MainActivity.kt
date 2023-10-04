@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private val toastDelayMillis: Long = 10000
     private val handler = Handler(Looper.getMainLooper())
     private val coroutineScope = CoroutineScope(Dispatchers.Default)
-    private val shipGenerator = ShipGenerator(this)
+    private lateinit var shipGenerator: ShipGenerator
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         label = findViewById(R.id.label)
-        Thread.sleep(15000)
+        shipGenerator = ShipGenerator(label)
+        Thread.sleep(5000)
         val numberOfShips = 10
         for (i in 1..numberOfShips) {
             coroutineScope.launch {

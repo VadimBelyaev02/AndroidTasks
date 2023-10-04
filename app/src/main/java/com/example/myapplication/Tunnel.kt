@@ -8,32 +8,25 @@ import kotlinx.coroutines.sync.Semaphore
 import java.util.LinkedList
 import java.util.Queue
 
-class Tunnel(private val context: Context) {
+class Tunnel(private val label: TextView) {
     private val semaphore = Semaphore(5)
 
     private var ships = arrayListOf<Ship>()
-    suspend fun goThroughTunnel(ship: Ship, label: TextView): Ship {
-        print("Ship with id = ${ship.id} try to enter the tunnel. ")
-        println()
-
-
-
+    suspend fun goThroughTunnel(ship: Ship): Ship {
+        printInLabel("\nShip with id = ${ship.id} try to enter the tunnel")
         semaphore.acquire()
         ships.remove(ship)
-        println("Ship with id = ${ship.id} entered the tunnel")
-        label.text = (label.text.toString() + "\nShip with id = ${ship.id} entered the tunnel")
+        printInLabel("\nShip with id = ${ship.id} entered the tunnel")
 
         delay(4000)
-        println("Ship with id = ${ship.id} left the tunnel")
         semaphore.release()
-        label.text = (label.text.toString() + "\nShip with id = ${ship.id} left the tunnel")
-
+        printInLabel("\nShip with id = ${ship.id} left the tunnel")
         return ship
     }
 
-    fun printInLabel(label: TextView) {
+    private fun printInLabel(text: String) {
         (label.context as Activity).runOnUiThread {
-           label.text = label.text.toString() + "\nShip with id = ${ship.id} try to enter the tunnel"
+            label.text = label.text.toString() + text
         }
     }
 }

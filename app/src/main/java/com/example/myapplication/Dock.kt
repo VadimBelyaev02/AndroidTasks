@@ -7,42 +7,47 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
-class Dock(private val context: Context) {
+class Dock(private val label: TextView) {
     private val breadMutex = Mutex()
     private val bananaMutex = Mutex()
     private val clothesMutex = Mutex()
 
-    suspend fun loadShip(ship: Ship, label: TextView) {
+    suspend fun loadShip(ship: Ship) {
         println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa")
         when (ship.type) {
             ShipType.BREAD -> {
                 breadMutex.withLock {
-                    loadCargo(ship, label)
+                    loadCargo(ship)
                 }
             }
 
             ShipType.CLOTHES -> {
                 clothesMutex.withLock {
-                    loadCargo(ship, label)
+                    loadCargo(ship)
                 }
             }
 
             ShipType.BANANA -> {
                 bananaMutex.withLock {
-                    loadCargo(ship, label)
+                    loadCargo(ship)
                 }
             }
         }
     }
 
-    private suspend fun loadCargo(ship: Ship, label: TextView) {
+    private suspend fun loadCargo(ship: Ship) {
+        println("BBBBBBBBBBBBBBBBBBB")
+        println("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD" + ship.capacity)
         var capacity = ship.capacity
-        while (ship.capacity > 0) {
+        while (capacity > 0) {
             capacity -= 10
             delay(1000)
         }
-        println("Ship with id = ${ship.id} was loaded")
-        label.text = (label.text.toString() + "\nShip with id = ${ship.id} was loaded")
+        println("CCCCCCCCCCCCCCCCCCCCCCCCCCC")
+
+        (label.context as Activity).runOnUiThread {
+            label.text = label.text.toString() + "\nShip with id = ${ship.id} was loaded"
+        }
 
     }
 }
