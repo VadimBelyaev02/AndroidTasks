@@ -17,28 +17,14 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var label: TextView
-    private var toastTime = 0
-    private var time = 0
-    private val toastDelayMillis: Long = 10000
-    private val handler = Handler(Looper.getMainLooper())
-    private val coroutineScope = CoroutineScope(Dispatchers.Default)
-    private lateinit var shipGenerator: ShipGenerator
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        label = findViewById(R.id.label)
-        shipGenerator = ShipGenerator(label)
-        Thread.sleep(5000)
-        val numberOfShips = 10
-        for (i in 1..numberOfShips) {
-            coroutineScope.launch {
-                shipGenerator.generateShip(label)
-            }
-        }
+
     }
 
 }
