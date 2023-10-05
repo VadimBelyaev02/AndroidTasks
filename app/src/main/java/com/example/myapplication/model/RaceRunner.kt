@@ -2,22 +2,25 @@ package com.example.myapplication.model
 
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import java.util.concurrent.Future
 import kotlin.random.Random
 
 class RaceRunner(private val vehicles: List<Vehicle>, private val trackLength: Int) {
 
-    private val executorService: ExecutorService = Executors.newFixedThreadPool(5)
+    private val executorService: ExecutorService = Executors.newFixedThreadPool(vehicles.size)
     fun race() {
-        val threads = mutableListOf<Thread>()
+        val futures = mutableListOf< Future<Unit>>()
 
         for (vehicle in vehicles) {
-            val thread = Thread {
+            val future = executorService.submit<Unit> {
                 run(vehicle)
             }
-            threads += thread
+            futures += future
         }
 
-        startRaceAndWait(threads)
+        for (future in futures) {
+            future.get()
+        }
 
         printResults()
     }
@@ -34,22 +37,13 @@ class RaceRunner(private val vehicles: List<Vehicle>, private val trackLength: I
                 println("$vehicle broke a wheel")
                 Thread.sleep(5000)
             }
-            println("$vehicle has covered $distance out of $trackLength")
+            println("$vehicle has covered ${distance.coerceAtMost(trackLength)} out of $trackLength")
         }
     }
 
-    private fun startRaceAndWait(threads: List<Thread>) {
-        for (thread in threads) {
-            thread.start()
-        }
-
-        for (thread in threads) {
-            thread.join()
-        }
-    }
 
     private fun printResults() {
-        val sortedVehicles = vehicles.sortedBy { vehicle: Vehicle -> vehicle.speed }
+        val sortedVehicles = vehicles.sortedBy { vehicle: Vehicle -> vehicle.speed }.reversed()
         println("Race results: ")
         for (i in sortedVehicles.indices) {
             println("${i}) ${sortedVehicles[i]}")
