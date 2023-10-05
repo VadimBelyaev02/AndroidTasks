@@ -41,12 +41,12 @@ class Dock(private val label: TextView) {
         var capacity = ship.capacity
         while (capacity > 0) {
             capacity -= 10
-            delay(1000)
+            delay(1000   )
         }
         println("CCCCCCCCCCCCCCCCCCCCCCCCCCC")
 
         (label.context as Activity).runOnUiThread {
-            label.text = label.text.toString() + "\nShip with id = ${ship.id} was loaded"
+            label.text = label.text.toString() + "\nShip ${ship.id} (${ship.type}, ${ship.capacity})  is loaded"
         }
 
     }
