@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#0d00ff</color>
+
+    <integer name="splash_screen_duration">3000</integer>
+
 </resources>
