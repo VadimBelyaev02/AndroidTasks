@@ -16,7 +16,7 @@ class StartActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Handler().postDelayed({
-            val intent = Intent(this, ConnectionActivity::class.java)
+            val intent = Intent(this, Places::class.java)
             startActivity(intent)
             finish()
         }, resources.getInteger(R.integer.splash_screen_duration).toLong())

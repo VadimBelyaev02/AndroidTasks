@@ -6,7 +6,7 @@ data class VenuesResponse(
 data class Venue(
     val fsq_id: String,
     val categories: List<Category>,
-    val chains: List<Any>, // Можете указать конкретный тип, если известен
+    val chains: List<Any>,
     val distance: Int,
     val geocodes: Geocodes,
     val link: String,
@@ -48,7 +48,7 @@ data class Location(
 )
 
 data class RelatedPlaces(
-    val empty: Boolean // Замените на конкретный тип, если известен
+    val empty: Boolean
 )
 
 data class Context(

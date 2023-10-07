@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="FirstColumn">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_marginStart">20dp</item>
-    </style>
-
-    <style name="SecondColumn">
-        <item name="android:layout_width">250dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_marginStart">40dp</item>
-        <item name="android:paddingStart">50dp</item>
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/blue</item>
     </style>
 </resources>
 
