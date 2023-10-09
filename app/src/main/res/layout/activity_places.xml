@@ -17,28 +17,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".ConnectionActivity">
-
-        <Button
-            android:id="@+id/connectionButton"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_button"
-            android:text="CONNECT TO FOURSQUARE" />
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/placesLayout"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar"
@@ -48,7 +26,7 @@
             android:id="@+id/placesList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

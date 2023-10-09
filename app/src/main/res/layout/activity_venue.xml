@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/venueDetails"
+    tools:context=".VenueActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--    <TextView-->
+<!--        android:id="@+id/beenHere"-->
+<!--        style="@style/Venue.Label"-->
+
+<!--        android:text="BEENHERE" />-->
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="0" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/categories"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="CATEGORIES" />-->
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="Plaza" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/contact"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="CONTACT" />-->
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="No information" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/hasPerk"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="HASPERK" />-->
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:text="false" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/hereNow"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="HERENOW" />-->
+
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:text="2" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/id"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="ID" />-->
+
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:text="oijgj9834j8934" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/location"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="LOCATION" />-->
+
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:text="Красная ...." />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/name"-->
+<!--        style="@style/Venue.Label"-->
+<!--        android:text="NAME" />-->
+
+
+<!--    <TextView-->
+<!--        style="@style/Venue.Value"-->
+<!--        android:text="some name" />-->
+</LinearLayout>
